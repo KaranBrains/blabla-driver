@@ -1,0 +1,11 @@
+.navbar-toggler {
+  padding: 0 !important;
+  font-size: 1.25rem;
+  line-height: 1;
+  background-color: transparent;
+  border: none !important;
+}
+
+.logo{
+  height: 80px;
+}
