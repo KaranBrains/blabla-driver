@@ -6,9 +6,10 @@ import "react-html5-camera-photo/build/css/index.css";
 
 function License() {
   const [value, setValue] = useState(false);
+  const [photo, setPhoto] = useState("");
   function handleTakePhoto(dataUri) {
     dataUri && setValue(false);
-    console.log(dataUri);
+    setPhoto(dataUri);
   }
   return (
     <>
@@ -61,7 +62,17 @@ function License() {
                     Take your photo
                   </button>
                 </div>
-
+                {photo ? (
+                  <div className="mt-4 text-center">
+                    <img
+                      src={photo}
+                      className="img-fluid"
+                      style={{ borderRadius: "50%",  height: '250px', width: '250px'}}
+                    />
+                  </div>
+                ) : (
+                  ""
+                )}
                 {value ? (
                   <div className="mt-4">
                     <Camera
@@ -73,6 +84,7 @@ function License() {
                 ) : (
                   ""
                 )}
+                
                 <Link to="/vehicleinfo">
                   <div className="text-center mt-5">
                     <button className="text-white bg-secondaryColor font-demi btn-blue">

@@ -21,25 +21,6 @@ function NavbarComponent() {
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="ml-auto">
-            <NavLink exact to="/" activeClassName="activeNav">
-              <Nav.Link
-                href="/"
-                className="font-demi font-17 px-3 navbar-item
-                  text-primaryColor text-center"
-              >
-                Company
-              </Nav.Link>
-            </NavLink>
-            <NavLink to="/contact" activeClassName="activeNav">
-              <Nav.Link
-                as={Link}
-                to="/contact"
-                className="font-demi font-17
-                  px-3 navbar-item text-primaryColor text-center"
-              >
-                Contact Us
-              </Nav.Link>
-            </NavLink>
             <NavLink to="/login" activeClassName="activeNav">
               <Nav.Link
                 href="/login"
