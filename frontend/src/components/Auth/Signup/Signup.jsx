@@ -41,13 +41,13 @@ function Signup() {
                   />
                 </div>
 
-                <div className="font-demi grey-hover text-primaryColor mt-4 py-3 px-3">
-                  Already a member?{" "}
-                  <a href="/login" className="ml-2">
-                    Signin
-                  </a>
-                </div>
-
+                <Link to="/login">
+                  {" "}
+                  <div className="font-demi grey-hover text-primaryColor mt-4 py-3 px-3">
+                  Already a member?{" "}                   
+                    <span className="ml-2 text-secondaryColor">Signin</span>
+                  </div>
+                </Link>                
                 <Link to="/otp">
                   <div className="text-center mt-4">
                     <button className="text-white bg-secondaryColor font-demi btn-blue">

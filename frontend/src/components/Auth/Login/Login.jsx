@@ -1,5 +1,6 @@
 import React from "react";
 import "./Login.css";
+import { Link } from "react-router-dom";
 
 function Login() {
   return (
@@ -27,16 +28,18 @@ function Login() {
                   />
                 </div>
 
-                <div className="font-demi grey-hover text-primaryColor mt-4 py-3 px-3">
-                  Become a member{" "}
-                  <a href="/signup" className="ml-2">
-                    Signup
-                  </a>
-                </div>
+                <Link to="/signup">
+                  {" "}
+                  <div className="font-demi grey-hover text-primaryColor mt-4 py-3 px-3">
+                    Become a member{" "}                   
+                    <span className="ml-2 text-secondaryColor">Signup</span>
+                  </div>
+                </Link>
 
                 <p className="text-secondaryColor font-demi grey-hover mt-4 py-3 px-3">
                   Forgot Password
                 </p>
+
                 <div className="text-center mt-5">
                   <button className="text-white bg-secondaryColor font-demi btn-blue">
                     Signin

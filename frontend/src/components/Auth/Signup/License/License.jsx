@@ -7,7 +7,7 @@ import "react-html5-camera-photo/build/css/index.css";
 function License() {
   const [value, setValue] = useState(false);
   function handleTakePhoto(dataUri) {
-    // Do stuff with the photo...
+    dataUri && setValue(false);
     console.log(dataUri);
   }
   return (
@@ -73,7 +73,7 @@ function License() {
                 ) : (
                   ""
                 )}
-                <Link to="/license">
+                <Link to="/vehicleinfo">
                   <div className="text-center mt-5">
                     <button className="text-white bg-secondaryColor font-demi btn-blue">
                       Submit

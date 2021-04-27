@@ -9,6 +9,7 @@ import Otp from "./components/Auth/Signup/Otp";
 import Signup from "./components/Auth/Signup/Signup";
 import NavbarComponent from "./components/Navbar/NavbarComponent";
 import License from "./components/Auth/Signup/License/License";
+import VehicleInfo from "./components/VehicleInfo/VehicleInfo";
 
 function App() {
   return (
@@ -23,6 +24,8 @@ function App() {
         <Route exact path="/otp" component={Otp} />
         <Route exact path="/email" component={Email} />
         <Route exact path="/license" component={License} />
+
+        <Route exact path="/vehicleinfo" component={VehicleInfo} />
       </Switch>
       <Footer />
     </div>
