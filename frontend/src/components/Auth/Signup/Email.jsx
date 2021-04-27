@@ -33,7 +33,7 @@ function Email() {
                     }}
                   />
                 </div>
-                <Link to="/license">
+                <Link to="/otp">
                   <div className="text-center mt-5">
                     <button className="text-white bg-secondaryColor font-demi btn-blue">
                       Continue

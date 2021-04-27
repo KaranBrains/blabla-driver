@@ -34,7 +34,7 @@ function Otp() {
                     }}
                   />
                 </div>
-                <Link to="/email">
+                <Link to="/license">
                   <div className="text-center mt-5">
                     <button className="text-white bg-secondaryColor font-demi btn-blue">
                       Continue

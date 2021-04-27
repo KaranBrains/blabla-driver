@@ -48,7 +48,7 @@ function Signup() {
                     <span className="ml-2 text-secondaryColor">Signin</span>
                   </div>
                 </Link>                
-                <Link to="/otp">
+                <Link to="/email">
                   <div className="text-center mt-4">
                     <button className="text-white bg-secondaryColor font-demi btn-blue">
                       Signup

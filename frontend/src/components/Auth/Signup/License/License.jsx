@@ -18,14 +18,14 @@ function License() {
           <div className="col-lg-10 col-md-10 col-sm-12 col-12">
             <div className="card">
               <h1 className="text-center font-bold text-primaryColor mb-4">
-                Please upload your documents
+                Please upload your License
               </h1>
               <form>
                 <div className="row">
                   <div className="col-lg-6 col-md-6 col-sm-12 col-12">
                     <div className="card">
                       <p className="font-demi text-muted mt-4 font-20 mobile-center">
-                        Front side of the document
+                        Front side of the License
                       </p>
                       <div className="input-group">
                         <input
@@ -39,7 +39,7 @@ function License() {
                   <div className="col-lg-6 col-md-6 col-sm-12 col-12">
                     <div className="card">
                       <p className="font-demi text-muted mt-4 font-20 mobile-center">
-                        Back side of the document
+                        Back side of the License
                       </p>
                       <div className="input-group">
                         <input
