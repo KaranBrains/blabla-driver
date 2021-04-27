@@ -1,12 +1,11 @@
 import React, { useState } from "react";
-import Navbar from "../../Navbar/NavbarComponent";
 import OtpInput from "react-otp-input";
+import { Link } from "react-router-dom";
 
 function Email() {
   const [otp, setOtp] = useState("");
   return (
     <>
-      <Navbar />
       <div className="container my-5">
         <div className="row d-flex justify-content-center">
           <div className="col-lg-8 col-md-8 col-sm-12 col-12">
@@ -18,7 +17,7 @@ function Email() {
                 <div className="d-flex justify-content-center">
                   <OtpInput
                     value={otp}
-                    numInputs={6}                    
+                    numInputs={6}
                     separator={<span>&nbsp;&nbsp;</span>}
                     inputStyle={{
                       margin: "10px",
@@ -34,11 +33,13 @@ function Email() {
                     }}
                   />
                 </div>
-                <div className="text-center mt-5">
-                  <button className="text-white bg-secondaryColor font-demi btn-blue">
-                    Continue
-                  </button>
-                </div>
+                <Link to="/license">
+                  <div className="text-center mt-5">
+                    <button className="text-white bg-secondaryColor font-demi btn-blue">
+                      Continue
+                    </button>
+                  </div>
+                </Link>
               </form>
             </div>
           </div>

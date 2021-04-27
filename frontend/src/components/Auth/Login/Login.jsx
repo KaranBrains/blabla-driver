@@ -1,11 +1,9 @@
 import React from "react";
-import Navbar from "../../Navbar/NavbarComponent";
 import "./Login.css";
 
 function Login() {
   return (
     <>
-     <Navbar />
       <div className="container my-5">
         <div className="row d-flex justify-content-center">
           <div className="col-lg-8 col-md-8 col-sm-12 col-12">
@@ -30,7 +28,10 @@ function Login() {
                 </div>
 
                 <div className="font-demi grey-hover text-primaryColor mt-4 py-3 px-3">
-                  Become a member  <a href="/signup" className="ml-2">Signup</a>
+                  Become a member{" "}
+                  <a href="/signup" className="ml-2">
+                    Signup
+                  </a>
                 </div>
 
                 <p className="text-secondaryColor font-demi grey-hover mt-4 py-3 px-3">
@@ -46,7 +47,6 @@ function Login() {
           </div>
         </div>
       </div>
-      
     </>
   );
 }

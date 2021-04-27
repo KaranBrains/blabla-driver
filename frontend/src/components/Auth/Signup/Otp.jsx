@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import Navbar from "../../Navbar/NavbarComponent";
 import OtpInput from "react-otp-input";
 import { Link } from "react-router-dom";
 
@@ -7,7 +6,6 @@ function Otp() {
   const [otp, setOtp] = useState("");
   return (
     <>
-      <Navbar />
       <div className="container my-5">
         <div className="row d-flex justify-content-center">
           <div className="col-lg-8 col-md-8 col-sm-12 col-12">

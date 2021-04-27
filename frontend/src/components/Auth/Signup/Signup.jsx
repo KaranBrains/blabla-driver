@@ -1,11 +1,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import Navbar from "../../Navbar/NavbarComponent";
 
 function Signup() {
   return (
     <>
-      <Navbar />
       <div className="container my-5">
         <div className="row d-flex justify-content-center">
           <div className="col-lg-8 col-md-8 col-sm-12 col-12">
