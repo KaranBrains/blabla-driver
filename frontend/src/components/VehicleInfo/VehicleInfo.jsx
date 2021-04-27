@@ -12,12 +12,16 @@ function VehicleInfo() {
                 Add Vehicle
               </h1>
               <form>
-                <div className="input-group mt-4">
-                <input
+                <div className="input-group mt-4 font-medium">
+                <select
                     type="text"
-                    className="form-control"
+                    className=""
                     placeholder="Vehicle Type"
-                  />
+                  >
+                    <option selected disabled>Vehicle type</option>
+                    <option value="Bus">Bus</option>
+                    <option value="Car">Car</option>
+                  </select>
                 </div>
                 <div className="input-group mt-4">
                   <input

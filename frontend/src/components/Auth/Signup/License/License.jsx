@@ -5,14 +5,16 @@ import Camera from "react-html5-camera-photo";
 import "react-html5-camera-photo/build/css/index.css";
 
 function License() {
+  const [fileOne, setFileOne] = useState("");
+  const [fileTwo, setFileTwo] = useState("");
   const [value, setValue] = useState(false);
   const [photo, setPhoto] = useState("");
   function handleTakePhoto(dataUri) {
     dataUri && setValue(false);
     setPhoto(dataUri);
-  }
+  }  
   return (
-    <>
+    <>    
       <div className="container my-5">
         <div className="row d-flex justify-content-center">
           <div className="col-lg-10 col-md-10 col-sm-12 col-12">
@@ -28,11 +30,14 @@ function License() {
                         Front side of the License
                       </p>
                       <div className="input-group">
-                        <input
+                      {fileOne ? <img src={fileOne} className="img-fluid w-100 h-100 p-4" style={{background: '#e0f6ff', borderRadius: '10px'}}/> : <input
                           type="file"
-                          className="form-control-upload"
+                          value=""
+                          onChange={(e) => setFileOne(URL.createObjectURL(e.target.files[0]))}
+                          className="form-control-upload custom-file-input"
                           style={{ height: "200px" }}
-                        />
+                        />}
+                        
                       </div>
                     </div>
                   </div>
@@ -42,11 +47,13 @@ function License() {
                         Back side of the License
                       </p>
                       <div className="input-group">
-                        <input
+                      {fileTwo ? <img src={fileTwo} className="img-fluid w-100 h-100 p-4" style={{background: '#e0f6ff', borderRadius: '10px'}}/> : <input
                           type="file"
-                          className="form-control-upload"
+                          value=""
+                          onChange={(e) => setFileTwo(URL.createObjectURL(e.target.files[0]))}
+                          className="form-control-upload custom-file-input"
                           style={{ height: "200px" }}
-                        />
+                        />}
                       </div>
                     </div>
                   </div>
@@ -67,14 +74,18 @@ function License() {
                     <img
                       src={photo}
                       className="img-fluid"
-                      style={{ borderRadius: "50%",  height: '250px', width: '250px'}}
+                      style={{
+                        borderRadius: "50%",
+                        height: "250px",
+                        width: "250px",
+                      }}
                     />
                   </div>
                 ) : (
                   ""
                 )}
                 {value ? (
-                  <div className="mt-4">
+                  <div className="mt-4 d-flex justify-content-center">
                     <Camera
                       onTakePhoto={(dataUri) => {
                         handleTakePhoto(dataUri);
@@ -84,7 +95,7 @@ function License() {
                 ) : (
                   ""
                 )}
-                
+
                 <Link to="/vehicleinfo">
                   <div className="text-center mt-5">
                     <button className="text-white bg-secondaryColor font-demi btn-blue">
